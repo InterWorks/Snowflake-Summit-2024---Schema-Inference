@@ -1,1 +1,116 @@
-[{"EVENT_DESCRIPTION":"Virtual machine has started","EVENT_GROUP":2,"EVENT_NAME":"VM start","EVENT_TIMESTAMP":"2024-06-02 08:15:00.000","ID":"1b62ca6d-feac-4e2e-8db0-ab37c00bb240"},{"EVENT_DESCRIPTION":"Application has started","EVENT_GROUP":2,"EVENT_NAME":"App start","EVENT_TIMESTAMP":"2024-06-02 08:20:00.000","ID":"f6a8aaa4-6a7b-498c-896d-a390223ee2e3"},{"EVENT_DESCRIPTION":"Application heartbeat successful","EVENT_GROUP":2,"EVENT_NAME":"App heartbeat","EVENT_TIMESTAMP":"2024-06-02 08:25:00.000","ID":"3b8d43aa-b20c-4e22-a5e7-89f5b60e142a"},{"EVENT_DESCRIPTION":"Application heartbeat successful","EVENT_GROUP":2,"EVENT_NAME":"App heartbeat","EVENT_TIMESTAMP":"2024-06-02 08:30:00.000","ID":"9516b7bc-15f6-466e-a28e-ace1f67f5a81"},{"EVENT_DESCRIPTION":"Application heartbeat successful","EVENT_GROUP":2,"EVENT_NAME":"App heartbeat","EVENT_TIMESTAMP":"2024-06-02 08:35:00.000","ID":"ec69d7e0-8c34-44ef-8c76-ca7cf531ae9c"},{"EVENT_DESCRIPTION":"Application heartbeat successful","EVENT_GROUP":2,"EVENT_NAME":"App heartbeat","EVENT_TIMESTAMP":"2024-06-02 08:40:00.000","ID":"befdf2ea-1dff-46f2-a893-2114b690c974"}]
+[
+  {
+    "EVENT_DESCRIPTION": "Virtual machine has started",
+    "EVENT_GROUP": 2,
+    "EVENT_ID": "1e00dc3f-c193-4e0f-a7a7-45d289af7cbc",
+    "EVENT_LINKS": {
+      "activities": [
+        "b17ff956-b4d9-4ddd-acbf-86136ec56066",
+        "d7be5a14-0d18-4c29-b8fb-724e5a86464a",
+        "6ebf16b0-f1c3-4126-9e12-06383664f4c1"
+      ],
+      "servers": [
+        "379c0ba0-dc25-42b6-abab-1cd8f6731431",
+        "1d30a98b-ef6b-414f-96ed-c38ded8e621f",
+        "81adc427-b2d2-4fd1-95ab-8467d260e729"
+      ]
+    },
+    "EVENT_NAME": "VM start",
+    "EVENT_TIMESTAMP": "2024-06-02 08:15:00.000"
+  },
+  {
+    "EVENT_DESCRIPTION": "Application has started",
+    "EVENT_GROUP": 2,
+    "EVENT_ID": "f81fea43-4a10-4a5c-bfd9-e46de3ac74aa",
+    "EVENT_LINKS": {
+      "activities": [
+        "fd7f3f3a-0436-45a7-9ca6-02d34c9a882d",
+        "cc6b894e-acef-474d-a875-8c95e4c0c09b",
+        "5a398825-f6ef-4388-997f-89f4fed56ffb"
+      ],
+      "servers": [
+        "5f8cd13b-907d-4611-bba0-ca710791eddc",
+        "e15e31f8-cf34-42da-a23e-198af4b7a46d",
+        "4d032e67-764b-4ac5-a07a-534135f09fa3"
+      ]
+    },
+    "EVENT_NAME": "App start",
+    "EVENT_TIMESTAMP": "2024-06-02 08:20:00.000"
+  },
+  {
+    "EVENT_DESCRIPTION": "Application heartbeat successful",
+    "EVENT_GROUP": 2,
+    "EVENT_ID": "7b6788be-23b7-45e2-bc7b-2f8253a46fd5",
+    "EVENT_LINKS": {
+      "activities": [
+        "6b9b08b9-3c22-450f-8d78-c97c0dfc983d",
+        "2cf65646-882c-4c9e-8a3b-834114ed4047",
+        "c8dbe710-cce9-46b3-b86a-ee19db2b1a49"
+      ],
+      "servers": [
+        "926e9c31-14b2-4e0f-9565-bbc3ec9e5e1a",
+        "33bf4193-c340-4df0-9fa1-2dc0d631430c",
+        "659d289c-27e3-4b4f-b5e0-096e2c1b3c2b"
+      ]
+    },
+    "EVENT_NAME": "App heartbeat",
+    "EVENT_TIMESTAMP": "2024-06-02 08:25:00.000"
+  },
+  {
+    "EVENT_DESCRIPTION": "Application heartbeat successful",
+    "EVENT_GROUP": 2,
+    "EVENT_ID": "1f63ad7c-d0ca-4161-8ead-50beccbd86d1",
+    "EVENT_LINKS": {
+      "activities": [
+        "99c52fcc-bd9e-4060-a7b0-3b8e42c87c02",
+        "82767480-55cb-4f48-baca-f9243f949608",
+        "b8ace87f-6785-4844-b5e2-9c8f9021e4aa"
+      ],
+      "servers": [
+        "77d58c55-65aa-4e89-bd6e-039ca3598a43",
+        "68585693-1b34-40b4-9680-4429094f0d37",
+        "0347b453-af82-4713-a85d-a429a15fe166"
+      ]
+    },
+    "EVENT_NAME": "App heartbeat",
+    "EVENT_TIMESTAMP": "2024-06-02 08:30:00.000"
+  },
+  {
+    "EVENT_DESCRIPTION": "Application heartbeat successful",
+    "EVENT_GROUP": 2,
+    "EVENT_ID": "ffab8332-2bcd-4f12-87b2-56803bc05a24",
+    "EVENT_LINKS": {
+      "activities": [
+        "154cd103-c1ba-4a70-911c-1261ef7e0f89",
+        "a260aac1-ad32-4f00-a7ac-10794c6ef37c",
+        "9c149604-8ef0-4f50-a898-0d873635707e"
+      ],
+      "servers": [
+        "be7f8190-99f3-42af-8c5f-3bf1cff197ca",
+        "3e637a92-adfa-4603-a01b-b5ff69e5fc95",
+        "92341282-ac27-44f0-ab59-4a11c3ee7480"
+      ]
+    },
+    "EVENT_NAME": "App heartbeat",
+    "EVENT_TIMESTAMP": "2024-06-02 08:35:00.000"
+  },
+  {
+    "EVENT_DESCRIPTION": "Application heartbeat successful",
+    "EVENT_GROUP": 2,
+    "EVENT_ID": "834b6d96-a9a6-46b6-8007-7761f8f09cb7",
+    "EVENT_LINKS": {
+      "activities": [
+        "b4ee82fa-a37a-49b9-8793-6a05f55e7806",
+        "53105f80-73ac-4c72-bda8-12c2cc071c63",
+        "3aeb7ced-ca93-4edf-8783-88850c08faf7"
+      ],
+      "servers": [
+        "64145fd2-93fc-449d-90b4-46f489fe5b2c",
+        "572972f9-98f7-4401-bff1-12ea051dea9d",
+        "a6f0b6e2-58e6-4ecc-ae02-41dcf039a619"
+      ]
+    },
+    "EVENT_NAME": "App heartbeat",
+    "EVENT_TIMESTAMP": "2024-06-02 08:40:00.000"
+  }
+]

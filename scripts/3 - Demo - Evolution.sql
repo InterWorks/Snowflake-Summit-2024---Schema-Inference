@@ -28,9 +28,9 @@ list @"STG__DATA";
 
 -- Create the table with only system fields
 create or replace table "RAW_DATA"(
-    "METADATA_FILE_PATH"                    string                                                comment 'Full path for the file in the originating stage'
-  , "METADATA_FILE_ROW_NUMBER"              integer                                               comment 'Row number within the file in the originating stage'
-  , "METADATA_RECORD_INGESTION_TIMESTAMP"   timestamp_ltz                                         comment 'Timestamp of record ingestion in local timezone'
+    "METADATA_FILE_PATH"                    string          comment 'Full path for the file in the originating stage'
+  , "METADATA_FILE_ROW_NUMBER"              integer         comment 'Row number within the file in the originating stage'
+  , "METADATA_RECORD_INGESTION_TIMESTAMP"   timestamp_ltz   comment 'Timestamp of record ingestion in local timezone'
 )
   enable_schema_evolution = TRUE
   comment = 'Table containing raw data, with schema evolution enabled to automatically add new columns as required'
@@ -82,7 +82,7 @@ create or replace file format "FF_JSON"
   strip_outer_array = TRUE
 ;
 
--- Ingest CSV data using schema evolution
+-- Ingest JSON data using schema evolution
 copy into "RAW_DATA"
 from '@"STG__DATA"/json'
   file_format = "FF_JSON"
@@ -109,7 +109,7 @@ create or replace file format "FF_PARQUET"
   compression = NONE
 ;
 
--- Ingest CSV data using schema evolution
+-- Ingest Parquet data using schema evolution
 copy into "RAW_DATA"
 from '@"STG__DATA"/parquet'
   file_format = "FF_PARQUET"

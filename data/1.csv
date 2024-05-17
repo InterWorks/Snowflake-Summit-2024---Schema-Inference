@@ -1,5 +1,5 @@
-ID|EVENT_GROUP|EVENT_DATE|EVENT_TIME|EVENT_NAME|EVENT_DESCRIPTION
-8e59dafa-edd4-4d0c-8e79-79f7d4b2e9d7|1|2024-06-01|08:15:00|VM start|Virtual machine has started
-ff2e1951-b495-4924-871a-20d20181cecf|1|2024-06-01|08:20:00|App start|Application has started
-d60042f0-a65f-4af0-b5a8-685b769a4194|1|2024-06-01|08:25:00|App error|Application encountered an error. View error log for details
-4f072baf-022b-4ea3-9827-16d757137e1e|1|2024-06-01|08:30:00|VM stopped|Virtual machine has stopped
+EVENT_ID|EVENT_GROUP|EVENT_DATE|EVENT_TIME|EVENT_NAME|EVENT_DESCRIPTION
+de3b3890-2325-4f2c-aec9-304d844e677a|1|2024-06-01|08:15:00|VM start|Virtual machine has started
+2c78c638-e043-42a2-a0c5-6fac9d061cf2|1|2024-06-01|08:20:00|App start|Application has started
+bd8427b2-7723-4957-a863-0fa55a56be9b|1|2024-06-01|08:25:00|App error|Application encountered an error. View error log for details
+6cd9d6b3-a3ba-46cd-b295-20df6db0af44|1|2024-06-01|08:30:00|VM stopped|Virtual machine has stopped

@@ -29,18 +29,19 @@ use schema "SETUP";
 
 -- Create demo data table
 create or replace table "DEMO_DATA"(
-    "ID" string
-  , "EVENT_GROUP" integer
-  , "EVENT_DATE" date
-  , "EVENT_TIME" time
-  , "EVENT_TIMESTAMP" timestamp
-  , "EVENT_CATEGORY" string
-  , "EVENT_NAME" string
-  , "EVENT_DESCRIPTION" string
+    "EVENT_ID"                string        not null
+  , "EVENT_GROUP"             integer       not null
+  , "EVENT_DATE"              date
+  , "EVENT_TIME"              time
+  , "EVENT_TIMESTAMP"         timestamp
+  , "EVENT_CATEGORY"          string
+  , "EVENT_NAME"              string
+  , "EVENT_DESCRIPTION"       string
+  , "EVENT_LINKS"             variant
 )
 as
 select
-    uuid_string() as "ID"
+    uuid_string() as "EVENT_ID"
   , $1 as "EVENT_GROUP"
   , '2024-06-0' || "EVENT_GROUP"::string as "EVENT_DATE"
   , $2::time as "EVENT_TIME"
@@ -48,6 +49,20 @@ select
   , $3 as "EVENT_CATEGORY"
   , $4 as "EVENT_NAME"
   , $5 as "EVENT_DESCRIPTION"
+  , object_construct(
+        'servers'
+        , array_construct(
+              uuid_string()  
+            , uuid_string()  
+            , uuid_string()  
+          )
+      , 'activities'
+        , array_construct(
+              uuid_string()  
+            , uuid_string()  
+            , uuid_string()  
+          )
+    ) as "EVENT_LINKS"
 from values
     (1, '08:15', 'VIRTUAL MACHINE', 'VM start', 'Virtual machine has started')
   , (1, '08:20', 'APPLICATION', 'App start', 'Application has started')
@@ -80,7 +95,7 @@ create or replace stage "STG__DEMO_DATA";
 copy into @"STG__DEMO_DATA"/csv/1.csv
 from (
   select
-      "ID"
+      "EVENT_ID"
     , "EVENT_GROUP"
     , "EVENT_DATE"
     , "EVENT_TIME"
@@ -88,6 +103,7 @@ from (
     -- , "EVENT_CATEGORY"
     , "EVENT_NAME"
     , "EVENT_DESCRIPTION"
+    -- , "EVENT_LINKS"
   from "DEMO_DATA"
   where "EVENT_GROUP" = 1
 )
@@ -102,7 +118,7 @@ from (
   select array_agg(object_construct(*)) as "RAW_JSON"
   from (
     select
-        "ID"
+        "EVENT_ID"
       , "EVENT_GROUP"
       -- , "EVENT_DATE"
       -- , "EVENT_TIME"
@@ -110,6 +126,7 @@ from (
       -- , "EVENT_CATEGORY"
       , "EVENT_NAME"
       , "EVENT_DESCRIPTION"
+      , "EVENT_LINKS"
     from "DEMO_DATA"
     where "EVENT_GROUP" = 2
   )
@@ -123,7 +140,7 @@ single = TRUE
 copy into @"STG__DEMO_DATA"/parquet/3.parquet
 from (
   select
-      "ID"
+      "EVENT_ID"
     , "EVENT_GROUP"
     -- , "EVENT_DATE"
     -- , "EVENT_TIME"
@@ -131,6 +148,7 @@ from (
     , "EVENT_CATEGORY"
     , "EVENT_NAME"
     , "EVENT_DESCRIPTION"
+    , "EVENT_LINKS"
   from "DEMO_DATA"
   where "EVENT_GROUP" = 3
 )
