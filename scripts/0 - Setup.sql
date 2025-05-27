@@ -3,6 +3,7 @@
 -- Environment
 
 use role SYSADMIN;
+use secondary roles NONE;
 
 -----------------------------------------
 -- Warehouse
